@@ -1,0 +1,18 @@
+{
+  "name": "conversor_monedas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.87.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

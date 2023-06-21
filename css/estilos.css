@@ -1,0 +1,84 @@
+body {
+    background-color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    width: 300px;
+    margin: 30px auto 0px auto; 
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+}
+
+header img {
+    height: 50px;
+    margin-left: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-size: 18px;
+}
+
+label {
+    /* La propiedad CSS display especifica cómo se debe mostrar un elemento en la página. El valor block indica que el elemento debe mostrarse como un bloque, lo que significa que ocupa todo el ancho disponible de su contenedor y provoca un salto de línea antes y después del elemento. */
+    display: block;
+    margin-bottom: 10px;
+}
+
+select {
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    border-radius: 0px 5px 5px 0px;
+    font-weight: 200;
+    font-size: 14px;
+    width: 95%;
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    border-radius: 0px 5px 5px 0px;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: #f6ad3f;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 5px 5px 5px 5px;
+    width: 100%;
+}
+
+footer {
+    font-weight: 100;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#error {
+    text-align: center;
+    color: #fd0c49;
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#contenedorResultado {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}

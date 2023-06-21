@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euro Convert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+    <!-- CABECERA -->
+    <header>
+        <h1>Euro Convert</h1>
+        <img src="./img/coin-euro.png" alt="Icono de euro">
+    </header>
+    <!-- FORMULARIO USUARIO -->
+    <main>
+        <div>
+            <p id="error"></p>
+        </div>
+        <form id="formEntrada" action="">
+            <div class="itemform">
+                <label for="monedaOrigen">Introduce la moneda de origen</label>
+                <!-- Las opciones del select se introducen posteriormente con JS -->
+                <select name="monedaOrigen" id="monedaOrigen">
+                    <option value="0">--Seleccione moneda de origen--</option>
+                </select>
+            </div>
+            <div class="itemform">
+                <label for="monedaDestino">Introduce la moneda de destino</label>
+                <!-- Las opciones del select se introducen posteriormente con JS -->
+                <select name="monedaDestino" id="monedaDestino">
+                    <option value="0">--Seleccione moneda de destino--</option>
+                </select>
+            </div>
+            <div class="itemform">
+                <label for="cantidad">Introduce la cantidad a convertir</label>
+                <input type="number" name="cantidad" id="cantidad">
+            </div>
+            <div class="itemform">
+                <input type="submit" id="convertir" value="CONVERTIR">
+            </div>
+        </form>
+        <div id="contenedorResultado">
+            <p id="resultado"></p>
+        </div>
+    </main>
+    <footer>
+        <p>Página realizada por Sergio Martín Reizábal</p>
+    </footer>
+    <!-- CÓDIGO JS -->
+    <script type="module" src="./dist/main.js"></script>
+</body>
+
+</html>
