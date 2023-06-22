@@ -21,6 +21,7 @@ function comprobarForm(event) {
             error.innerText = "La cantidad introducida no es un número";
             return false;
         } else {
+            error.innerText = "";
             convertCurrency();
             return true;
         }
