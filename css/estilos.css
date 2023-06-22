@@ -65,11 +65,15 @@ input[type="submit"] {
 footer {
     font-weight: 100;
     text-align: center;
-    margin-top: 30px;
+    margin-top: auto;
+    margin-bottom: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 #error {
-    text-align: center;
     color: #fd0c49;
     font-weight: 300;
     font-size: 14px;

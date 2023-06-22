@@ -2,30 +2,45 @@ import axios from 'axios';
 import { to } from './to.js';
 
 // API KEY
-const access_key = 'beb329cb83c64eb5906dd4643526170c';
+// const access_key = 'beb329cb83c64eb5906dd4643526170c';
 
-export async function getExchangeRates(destinationSymbol) {
-    const endpoint = 'latest';
-    const url = `http://api.exchangeratesapi.io/v1/${endpoint}?access_key=${access_key}&symbols=${destinationSymbol}`;
+const apiKey = 'Jkf5jfnQ4XyUQH2V115IylWvauKD4Dvy6a0b7ZNG';
+const base_currency = 'EUR'; 
 
-    console.log("Llamando a la API para obtener el exchange rate...");
+export async function getCurrenciesSymbolsFromAPI() {
+    const [err, response] = await to(axios.get('https://api.currencyapi.com/v3/currencies', {
+        params: {
+            apikey: apiKey,
+            // currencies: currencies
+        }
+    }));
 
-    const [err, response] = await to(axios.get(url));
     if (err) {
         console.log(err);
         return;
     }
 
-    console.log("La llamada a la API ha tenido éxito");
+    console.log(response.data);
 
-    const json = response.data;
-    // console.log(destinationSymbol);
-    // console.log(json);
-    // console.log(json.rates);
-    // console.log(json.rates[destinationSymbol]);
-    // console.log(json.base);
+    return response.data;
+}
 
-    return json.rates[destinationSymbol];
+export async function getExchangeRatesFromAPI() {
+    const [err, response] = await to(axios.get('https://api.currencyapi.com/v3/latest', {
+        params: {
+            apikey: apiKey,
+            base_currency: base_currency
+        }
+    }));
+
+    if (err) {
+        console.log(err);
+        return;
+    }
+    
+    console.log("exchangeRates", response.data);
+
+    return response.data;
 }
 
 export async function getSymbols() {
